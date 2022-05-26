@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+	  <script>
+        function validate()
+		{
+			var regex = /^[A-Z]{2}\s[0-9]{2}\s[A-Z]{2}\s[0-9]{4}$/
+		var vehicleno = document.getElementById("vehicleno").value; 
+		var dor = document.getElementById("DOR").value;
+		  var userinput = document.getElementById("DOB").value;  
+    var dob = new Date(userinput); 
+         var month_diff = Date.now() - dob.getTime();   
+          var age_dt = new Date(month_diff);    
+
+           var year = age_dt.getUTCFullYear();  
+              var age = Math.abs(year - 1970); 
+              console.log(age);
+		if(regex.test(vehicleno) && age>18)
+		{
+			alert("Valid Credentials");
+			
+		}
+		
+		else if(age<18)
+			alert("Age needs to above 18!");
+		else
+		alert("Invalid Vehicle Number!");
+		}
+        	
+        </script>
+
+	<form action = "success.html" onsubmit="return validate();">
+  <div class="container">
+    <div class="title">Vehicle Number validation</div>
+    <div class="content">
+      
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Vehicle Number</span>
+            <input type="text" placeholder="Enter your Vehicle number" id="vehicleno" name="vehicleno" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Date of Birth</span>
+            <input type="Date" placeholder="Enter your date of birth" id="DOB" name = "DOB"required>
+          </div>
+          <div class="input-box">
+            <span class="details">Date of registration</span>
+            <input type="Date" placeholder="Enter your date of registration" id="DOR" name ="DOR" required>
+          </div>
+          <p id="result">
+          </p>
+        <div class="button">
+        	<br>
+        	<br>
+          <input type="Submit" value="Submit">
+       
+
+        </div> </form> 
+      
+        
+
+</body>
+</html>

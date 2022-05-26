@@ -1,0 +1,134 @@
+<html>
+<head>
+	<title>Find your nearest RTO</title>
+	<link rel="stylesheet" href="sucess.css" >
+</head> 
+<br>
+<h1 style="font-family:helvetica;">
+  <div>
+<center><b>Find your nearest RTO</b></center>
+  </div>
+</h1>
+<body>
+  <br>
+  <br>
+  <div>
+      <center><p>Please Enter your license number</p></center>
+  </div>
+  <div class = "input-box">
+    <center><input placeholder="License Plate" id = "plate" type="string" required></center>
+  </div>
+  <br>
+  <br>
+  <div>
+    <center><button class = "button" type="button" onclick="calc()">Submit</button></center>
+  </div>
+    <div>
+        <br>
+        <br>
+      <p style="text-align:center;"><b>
+        <center><p>Your Nearest RTO is: </p><p id="rto">0</p></center>
+        </p>
+        <br>
+        <br>
+	</div>
+    <br>
+    <br>
+    	<script>
+            function calc(){
+                let lp = document.getElementById("plate").value;
+                let determiner = lp.substring(0,4);
+                let determiner2 = lp.substring(0,4);
+                let rtoname;
+
+                //column 1, 4 letter 
+                if(determiner.localeCompare("TN01")==0) rtoname = "CHENNAI (CENTRAL)";
+                else if(determiner.localeCompare("TN02")==0) rtoname = "CHENNAI(NORTH-WEST)";
+                else if(determiner.localeCompare("TN03")==0) rtoname = "CHENNAI(NORTH EAST)";
+                else if(determiner.localeCompare("TN04")==0) rtoname = "CHENNAI(EAST)";
+                else if(determiner.localeCompare("TN05")==0) rtoname = "CHENNAI(NORTH)";
+                else if(determiner.localeCompare("TN06")==0) rtoname = "CHENNAI(SOUTH-EAST)";
+                else if(determiner.localeCompare("TN07")==0) rtoname = "RTO CHENNAI(SOUTH)";
+                else if(determiner.localeCompare("TN09")==0) rtoname = "CHENNAI (WEST)";
+                else if(determiner.localeCompare("TN10")==0) rtoname = "CHENNAI(SOUTH-WEST)";
+                else if(determiner.localeCompare("TN11")==0) rtoname = "TAMBARAM";
+                else if(determiner.localeCompare("TN12")==0) rtoname = "POONAMALLE";
+                else if(determiner.localeCompare("TN13")==0) rtoname = "AMBATTUR";
+                else if(determiner.localeCompare("TN14")==0) rtoname = "SHOLINGANALLUR";
+                else if(determiner.localeCompare("TN15")==0) rtoname = "ULUNDURPET";
+                else if(determiner.localeCompare("TN16")==0) rtoname = "TINDIVANAM";
+                else if(determiner.localeCompare("TN18")==0) rtoname = "REDHILLS";
+                else if(determiner.localeCompare("TN19")==0) rtoname = "CHENGALPATTU";
+                else if(determiner.localeCompare("TN20")==0) rtoname = "THIRUTHANI";
+                else if(determiner.localeCompare("TN21")==0) rtoname = "KANCHEEPURAM";
+                else if(determiner.localeCompare("TN22")==0) rtoname = "MEENAMBAKKAM";
+                else if(determiner.localeCompare("TN23")==0) rtoname = "Vellore RTO";
+                else if(determiner.localeCompare("TN24")==0) rtoname = "KRISHNAGIRI";
+                else if(determiner.localeCompare("TN25")==0) rtoname = "TIRUVANNAMALAI";
+                else if(determiner.localeCompare("TN28")==0) rtoname = "NAMAKKAL (NORTH)";
+                else if(determiner.localeCompare("TN29")==0) rtoname = "DHARMAPURI";
+                else if(determiner.localeCompare("TN30")==0) rtoname = "SALEM(WEST)";
+                else if(determiner.localeCompare("TN31")==0) rtoname = "CUDDALORE";
+                else if(determiner.localeCompare("TN32")==0) rtoname = "VILLUPURAM";
+                else if(determiner.localeCompare("TN33")==0) rtoname = "ERODE-EAST";
+                else if(determiner.localeCompare("TN34")==0) rtoname = "TIRUCHENCODE";
+                else if(determiner.localeCompare("TN36")==0) rtoname = "GOBICHETTIPALAYAM";
+                else if(determiner.localeCompare("TN37")==0) rtoname = "COIMBATORE(SOUTH)";
+
+                //column 2, 4 letter
+                else if(determiner.localeCompare("TN38")==0) rtoname = "COIMBATORE(NORTH)";
+                else if(determiner.localeCompare("TN39")==0) rtoname = "TIRUPPUR(NORTH)";
+                else if(determiner.localeCompare("TN40")==0) rtoname = "METTUPALAYAM";
+                else if(determiner.localeCompare("TN41")==0) rtoname = "POLLACHI";
+                else if(determiner.localeCompare("TN42")==0) rtoname = "TIRUPPUR(SOUTH)";
+                else if(determiner.localeCompare("TN43")==0) rtoname = "OOTY";
+                else if(determiner.localeCompare("TN45")==0) rtoname = "TIRUCHIRAPALLI";
+                else if(determiner.localeCompare("TN46")==0) rtoname = "PERAMBALUR";
+                else if(determiner.localeCompare("TN47")==0) rtoname = "KARUR";
+                else if(determiner.localeCompare("TN48")==0) rtoname = "SRIRANGAM";
+                else if(determiner.localeCompare("TN49")==0) rtoname = "THANJAVUR";
+                else if(determiner.localeCompare("TN50")==0) rtoname = "THIRUVARUR";
+                else if(determiner.localeCompare("TN51")==0) rtoname = "NAGAPATTINAM";
+                else if(determiner.localeCompare("TN52")==0) rtoname = "SANGARI";
+                else if(determiner.localeCompare("TN54")==0) rtoname = "SALEM(EAST)";
+                else if(determiner.localeCompare("TN55")==0) rtoname = "PUDUKOTTAI";
+                else if(determiner.localeCompare("TN56")==0) rtoname = "PERUNDURAI";
+                else if(determiner.localeCompare("TN57")==0) rtoname = "DINDIGUL";
+                else if(determiner.localeCompare("TN58")==0) rtoname = "MADURAI(SOUTH)";
+                else if(determiner.localeCompare("TN59")==0) rtoname = "MADURAI(NORTH)";
+                else if(determiner.localeCompare("TN60")==0) rtoname = "THENI";
+                else if(determiner.localeCompare("TN61")==0) rtoname = "ARIYALUR";
+                else if(determiner.localeCompare("TN6")==0) rtoname = "MADURAI(CENTRAL)";
+                else if(determiner.localeCompare("TN63")==0) rtoname = "RAMANATHPURAM";
+                else if(determiner.localeCompare("TN64")==0) rtoname = "COIMBATORE(CENTRAL)";
+                else if(determiner.localeCompare("TN65")==0) rtoname = "VIRUDHUNAGAR";
+                else if(determiner.localeCompare("TN66")==0) rtoname = "KUMBAKONAM";
+                else if(determiner.localeCompare("TN68")==0) rtoname = "TUTICORIN";
+                else if(determiner.localeCompare("TN69")==0) rtoname = "KOVILPATTI";
+                else if(determiner.localeCompare("TN70")==0) rtoname = "HOSUR";
+                else if(determiner.localeCompare("TN72")==0) rtoname = "TIRUNELVELI";
+                else if(determiner.localeCompare("TN73")==0) rtoname = "RANIPET";
+                else if(determiner.localeCompare("TN74")==0) rtoname = "NAGERCOIL";
+                else if(determiner.localeCompare("TN75")==0) rtoname = "MARTHANDAM";
+                else if(determiner.localeCompare("TN76")==0) rtoname = "TENKASI";
+                else if(determiner.localeCompare("TN77")==0) rtoname = "ATTUR";
+                else if(determiner.localeCompare("TN78")==0) rtoname = "DHARAPURAM";
+                else if(determiner.localeCompare("TN79")==0) rtoname = "SANKARANKOIL";
+                else if(determiner.localeCompare("TN81")==0) rtoname = "TIRUCHIRAPALLI(EAST)";
+                else if(determiner.localeCompare("TN82")==0) rtoname = "MAYILADUTHURAI";
+                else if(determiner.localeCompare("TN83")==0) rtoname = "VANIYAMBADI";
+                else if(determiner.localeCompare("TN84")==0) rtoname = "SRIVILIPUTHAR";
+                else if(determiner.localeCompare("TN86")==0) rtoname = "KUNDRATHUR";
+                else if(determiner.localeCompare("TN86")==0) rtoname = "ERODE(WEST)";
+                else if(determiner.localeCompare("TN87")==0) rtoname = "SRIPERUMBUDUR";
+                else if(determiner.localeCompare("TN88")==0) rtoname = "NAMAKKAL(SOUTH)";
+                else if(determiner.localeCompare("TN90")==0) rtoname = "SALEM(SOUTH)";
+                else if(determiner.localeCompare("TN91")==0) rtoname = "CHIDAMBARAM";
+                else if(determiner.localeCompare("TN92")==0) rtoname = "TIRUCHENDUR";
+                else if(determiner.localeCompare("TN93")==0) rtoname = "METTUR";
+            
+                document.getElementById("rto").textContent = rtoname;
+            }
+        </script>
+</body>
+</html>
